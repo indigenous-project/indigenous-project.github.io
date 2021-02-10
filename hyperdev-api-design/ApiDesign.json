@@ -4,7 +4,7 @@
         "description":"This API is for signing up users. it will use for both admin and application users",
         "type":"post",
         "target":"general",
-        "url":"api/users/signup",
+        "url":"auth/users/signup",
         "authorization":false,
         "parameters":["email","password","firstname","lastname","indigenousType","isAdmin","age","gender","imei"]
     },
@@ -13,7 +13,7 @@
         "description":"This API is for signing in users. the response of this API will include token for authorization include APIs",
         "type":"post",
         "target":"general",
-        "url":"api/users/signin",
+        "url":"auth/users/signin",
         "authorization":false,
         "parameters":["email","password"]
     },
@@ -22,7 +22,7 @@
         "description":"This API is for editing password",
         "type":"post",
         "target":"general",
-        "url":"api/users/managepassword",
+        "url":"auth/users/managepassword",
         "authorization":true,
         "parameters":["oldpassword","newpassword"]
     },
@@ -31,7 +31,7 @@
         "description":"This API is for resetting password. a new password will be emailed to the provided email address",
         "type":"post",
         "target":"general",
-        "url":"api/users/resetpassword",
+        "url":"auth/users/resetpassword",
         "authorization":false,
         "parameters":["email"]
     },
@@ -40,7 +40,7 @@
         "description":"This API is for loging out users",
         "type":"post",
         "target":"general",
-        "url":"api/users/logout",
+        "url":"auth/users/logout",
         "authorization":true,
         "parameters":[]
     },
@@ -49,7 +49,7 @@
         "description":"This API is for pulling list of all users based on filters applied",
         "type":"get",
         "target":"admin",
-        "url":"api/users/list",
+        "url":"auth/users/list",
         "authorization":true,
         "parameters":["page","keyword","gender","indigenousType"]
     },
@@ -58,7 +58,7 @@
         "description":"This API is for pulling data related to a specific user",
         "type":"get",
         "target":"general",
-        "url":"api/users/detail",
+        "url":"auth/users/detail",
         "authorization":true,
         "parameters":["userid"]
     },
@@ -67,16 +67,7 @@
         "description":"This API is for editing user profile information. for admin panel userid must be passed as parameter but for application users userid parameter is not required",
         "type":"put",
         "target":"general",
-        "url":"api/users/edit",
-        "authorization":true,
-        "parameters":["userid","firstname","lastname","indigenousType","age","gender"]
-    },
-    {
-        "name":"Edit User",
-        "description":"This API is for editing user profile information. for admin panel userid must be passed as parameter but for application users userid parameter is not required",
-        "type":"put",
-        "target":"general",
-        "url":"api/users/edit",
+        "url":"auth/users/edit",
         "authorization":true,
         "parameters":["userid","firstname","lastname","indigenousType","age","gender"]
     },
