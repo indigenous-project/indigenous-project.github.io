@@ -121,7 +121,7 @@
         "description":"This API is for getting details of a single post",
         "type":"get",
         "target":"general",
-        "url":"api/posts/detail",
+        "url":"api/posts/me",
         "authorization":true,
         "parameters":["postId"]
     },
