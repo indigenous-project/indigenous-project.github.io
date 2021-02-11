@@ -58,7 +58,7 @@
         "description":"This API is for pulling data related to a specific user",
         "type":"get",
         "target":"general",
-        "url":"auth/users/detail",
+        "url":"auth/users/me",
         "authorization":true,
         "parameters":["userid"]
     },
@@ -90,15 +90,6 @@
         "parameters":["postId","title","description","categoryId","mediaId[]","isPublic"]
     },
     {
-        "name":"Delete Post",
-        "description":"This API is for deleting a post by admin",
-        "type":"delete",
-        "target":"admin",
-        "url":"api/posts/delete",
-        "authorization":true,
-        "parameters":["postId"]
-    },
-    {
         "name":"List Posts",
         "description":"This API is for pulling all posts based on provided filters",
         "type":"get",
@@ -112,16 +103,7 @@
         "description":"This API is for getting details of a single post",
         "type":"get",
         "target":"general",
-        "url":"api/posts/me",
-        "authorization":true,
-        "parameters":["postId"]
-    },
-    {
-        "name":"Change isPublic Post",
-        "description":"This API is for changing isPublic status of a post by admin",
-        "type":"put",
-        "target":"admin",
-        "url":"api/posts/changeIsPublic",
+        "url":"api/posts/detail",
         "authorization":true,
         "parameters":["postId"]
     },
