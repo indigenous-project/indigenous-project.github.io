@@ -245,7 +245,7 @@
     {
         "name":"Edit Category",
         "description":"This API is for editing a category by admin",
-        "type":"put",
+        "type":"patch",
         "target":"admin",
         "url":"api/categories/edit",
         "authorization":true,
