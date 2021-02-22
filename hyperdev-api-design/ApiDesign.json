@@ -200,7 +200,7 @@
     {
         "name":"Delete Comment",
         "description":"This API is for deleting a single comment by admin",
-        "type":"delete",
+        "type":"patch",
         "target":"general",
         "url":"api/comments/delete",
         "authorization":true,
