@@ -137,7 +137,7 @@
     {
         "name":"Edit Center",
         "description":"This API is for editing a center by admin",
-        "type":"put",
+        "type":"patch",
         "target":"admin",
         "url":"api/centers/edit",
         "authorization":true,
@@ -176,15 +176,6 @@
         "type":"get",
         "target":"general",
         "url":"api/centers/detail",
-        "authorization":true,
-        "parameters":["centerId"]
-    },
-    {
-        "name":"Change isPublic Center",
-        "description":"This API is for changing isPublic status of a center by admin",
-        "type":"put",
-        "target":"admin",
-        "url":"api/centers/changeIsPublic",
         "authorization":true,
         "parameters":["centerId"]
     },
