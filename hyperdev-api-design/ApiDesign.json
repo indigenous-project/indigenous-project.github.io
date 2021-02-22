@@ -155,7 +155,7 @@
     {
         "name":"Delete Center",
         "description":"This API is for deleting a center by admin",
-        "type":"delete",
+        "type":"patch",
         "target":"admin",
         "url":"api/centers/delete",
         "authorization":true,
