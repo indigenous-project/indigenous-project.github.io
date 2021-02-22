@@ -190,10 +190,10 @@
     },
     {
         "name":"List Comment",
-        "description":"This API is for pulling all comments for admin based on provided filters",
+        "description":"This API is for pulling all comments based on provided filters",
         "type":"get",
-        "target":"admin",
-        "url":"api/comments/listForAdmin",
+        "target":"general",
+        "url":"api/comments/list",
         "authorization":true,
         "parameters":["keyword","isPublic","dateFrom","dateTo","page"]
     },
@@ -205,6 +205,24 @@
         "url":"api/comments/delete",
         "authorization":true,
         "parameters":["commentId"]
+    },
+    {
+        "name":"Add Media",
+        "description":"This API is for adding a single media",
+        "type":"post",
+        "target":"general",
+        "url":"api/medias/add",
+        "authorization":true,
+        "parameters":""
+    },
+    {
+        "name":"List Media",
+        "description":"This API is for getting a list of media",
+        "type":"get",
+        "target":"general",
+        "url":"api/medias/list",
+        "authorization":true,
+        "parameters":""
     },
     {
         "name":"Add Category",
