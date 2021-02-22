@@ -207,15 +207,6 @@
         "parameters":["commentId"]
     },
     {
-        "name":"Change isPublic Comment",
-        "description":"This API is for changing isPublic status of a comment by admin",
-        "type":"put",
-        "target":"admin",
-        "url":"api/posts/changeIsPublic",
-        "authorization":true,
-        "parameters":["commentId"]
-    },
-    {
         "name":"Add Category",
         "description":"This API is for adding new category by admins.",
         "type":"post",
