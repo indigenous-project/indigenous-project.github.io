@@ -36,15 +36,6 @@
         "parameters":["email"]
     },
     {
-        "name":"Logout",
-        "description":"This API is for loging out users",
-        "type":"post",
-        "target":"general",
-        "url":"auth/users/logout",
-        "authorization":true,
-        "parameters":[]
-    },
-    {
         "name":"List Users",
         "description":"This API is for pulling list of all users based on filters applied",
         "type":"get",
