@@ -38,6 +38,13 @@ td{
     padding:3px 10px;
     text-transform: capitalize;
 }
+.api-type-patch{
+    background-color: #00bcd494;
+    color: white;
+    border-radius: 5px;
+    padding:3px 10px;
+    text-transform: capitalize;
+}
 .api-type-delete{
     background-color: red;
     color: white;
