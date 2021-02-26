@@ -284,6 +284,24 @@
         "authorization": true,
         "parameters": []
     },
+     {
+        "name": "Add Media",
+        "description": "This API is for adding new media",
+        "type": "post",
+        "target": "admin",
+        "url": "api/medias/add",
+        "authorization": true,
+        "parameters": ["type","extention","path"]
+    },
+    {
+        "name": "List Comment",
+        "description": "This API is for pulling all medias for admin",
+        "type": "get",
+        "target": "admin",
+        "url": "api/medias/list",
+        "authorization": true,
+        "parameters": []
+    },
     {
         "name": "Add Comment",
         "description": "This API is for adding new comment",
@@ -298,7 +316,7 @@
         "description": "This API is for pulling all comments for admin",
         "type": "get",
         "target": "admin",
-        "url": "api/comments/listForAdmin",
+        "url": "api/comments/list",
         "authorization": true,
         "parameters": []
     },
