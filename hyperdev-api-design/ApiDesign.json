@@ -294,7 +294,7 @@
         "parameters": ["type","extention","path"]
     },
     {
-        "name": "List Comment",
+        "name": "List Media",
         "description": "This API is for pulling all medias for admin",
         "type": "get",
         "target": "admin",
