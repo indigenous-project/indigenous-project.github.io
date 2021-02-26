@@ -286,7 +286,7 @@
     },
      {
         "name": "Add Media",
-        "description": "This API is for adding new media",
+        "description": "This API is for adding a new media",
         "type": "post",
         "target": "admin",
         "url": "api/medias/add",
