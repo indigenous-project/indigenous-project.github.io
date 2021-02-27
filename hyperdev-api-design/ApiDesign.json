@@ -328,7 +328,7 @@
         "url": "api/comments/delete",
         "authorization": true,
         "parameters": ["commentId"]
-    },
+c    },
     {
         "name": "Edit Comment",
         "description": "This API is for editing comment by admin",
@@ -349,19 +349,10 @@
     },
     {
         "name": "Edit Category",
-        "description": "This API is for editing a category by admin",
-        "type": "put",
-        "target": "admin",
-        "url": "api/categories/edit/:id",
-        "authorization": true,
-        "parameters": ["name"]
-    },
-    {
-        "name": "Edit Category",
         "description": "This API is for editing a specific attribute of a category by admin",
         "type": "patch",
         "target": "admin",
-        "url": "api/categories/edit/:id",
+        "url": "api/categories/edit/:categoryId",
         "authorization": true,
         "parameters": ["name"]
     },
@@ -370,7 +361,7 @@
         "description": "This API is for deleting a category by admin",
         "type": "delete",
         "target": "admin",
-        "url": "api/categories/delete/:id",
+        "url": "api/categories/delete/:categoryId",
         "authorization": true,
         "parameters": []
     },
