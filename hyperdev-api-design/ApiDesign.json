@@ -46,12 +46,21 @@
     },
     {
         "name": "Reset Password",
-        "description": "This API is for resetting password. a new password will be emailed to the provided email address",
+        "description": "Show to user the notification: You will receive an email to confirm the password has been reset  when user tap on the link",
         "type": "get",
         "target": "general",
         "url": "auth/users/resetpassword/:token",
         "authorization": false,
-        "parameters": ["email"]
+        "parameters": []
+    },
+     {
+        "name": "Reset Password",
+        "description": "Post reset password with new password, replace new password,remove resetToken by set null then send the email for confirmation",
+        "type": "post",
+        "target": "general",
+        "url": "auth/users/resetpassword/:token",
+        "authorization": false,
+        "parameters": ["password"]
     },
     {
         "name": "Logout",
@@ -116,7 +125,7 @@
         "description": "This API is for editing a post by admin",
         "type": "put",
         "target": "admin",
-        "url": "api/posts/edit/:id",
+        "url": "api/posts/edit/:postId",
         "authorization": true,
         "parameters": [
             "postId",
@@ -132,7 +141,7 @@
         "description": "This API is for editing a specific attribute of the post by admin",
         "type": "patch",
         "target": "admin",
-        "url": "api/posts/edit/:id",
+        "url": "api/posts/edit/:postId",
         "authorization": true,
         "parameters": [
             "postId",
@@ -157,7 +166,7 @@
         "description": "This API is for getting details of a single post",
         "type": "get",
         "target": "general",
-        "url": "api/posts/detail/:id",
+        "url": "api/posts/detail/:postId",
         "authorization": true,
         "parameters": []
     },
@@ -369,7 +378,7 @@
         "name": "List Category",
         "description": "This API is for pulling all categories for admin",
         "type": "get",
-        "target": "admin",
+        "target": "both",
         "url": "api/categories/list",
         "authorization": true,
         "parameters": []
@@ -415,7 +424,7 @@
         "description": "This API is for editing a service by admin",
         "type": "put",
         "target": "admin",
-        "url": "api/services/edit/:id",
+        "url": "api/services/edit/:serviceId",
         "authorization": true,
         "parameters": [
             "name",
@@ -433,7 +442,7 @@
         "description": "This API is for editing a specific attribute of a service by admin",
         "type": "patch",
         "target": "admin",
-        "url": "api/services/edit/:id",
+        "url": "api/services/edit/:serviceId",
         "authorization": true,
         "parameters": [
             "name (optional)",
@@ -460,7 +469,7 @@
         "description": "This API is for getting details of a single service",
         "type": "get",
         "target": "general",
-        "url": "api/services/detail/:id",
+        "url": "api/services/detail/:serviceId",
         "authorization": true,
         "parameters": []
     },
@@ -478,7 +487,7 @@
         "description": "This API is for editing a question by admin",
         "type": "put",
         "target": "admin",
-        "url": "api/questions/edit/:id",
+        "url": "api/questions/edit/:questionId",
         "authorization": true,
         "parameters": ["text", "answerId[]"]
     },
@@ -487,7 +496,7 @@
         "description": "This API is for editing a specific attribute of a question by admin",
         "type": "patch",
         "target": "admin",
-        "url": "api/questions/edit/:id",
+        "url": "api/questions/edit/:questionId",
         "authorization": true,
         "parameters": ["text", "answerId[]"]
     },
@@ -505,7 +514,7 @@
         "description": "This API is for getting details of a single question",
         "type": "get",
         "target": "general",
-        "url": "api/questions/detail/:id",
+        "url": "api/questions/detail/:questionId",
         "authorization": true,
         "parameters": []
     },
@@ -516,14 +525,14 @@
         "target": "general",
         "url": "api/discussions/add",
         "authorization": true,
-        "parameters": ["text"]
+        "parameters": ["title","description","[categoryIds]"]
     },
     {
         "name": "Edit Discussion",
         "description": "This API is for editing a specific attribute of a discussion by admin",
         "type": "patch",
         "target": "admin",
-        "url": "api/discussion/edit/:id",
+        "url": "api/discussion/edit/:discussionId",
         "authorization": true,
         "parameters": [
             "text (optional)",
@@ -554,7 +563,7 @@
         "description": "This API is for pulling a discussion with all of including replies",
         "type": "get",
         "target": "general",
-        "url": "api/discussions/detail/:id",
+        "url": "api/discussions/detail/:discussionId",
         "authorization": true,
         "parameters": []
     },
@@ -581,7 +590,7 @@
         "description": "This API is for getting statistics of a poll",
         "type": "get",
         "target": "admin",
-        "url": "api/poll/statistics/:id",
+        "url": "api/poll/statistics/:questionId",
         "authorization": true,
         "parameters": []
     },
@@ -599,7 +608,7 @@
         "description": "This API is for editing a specific attribute of a reply by admin",
         "type": "patch",
         "target": "admin",
-        "url": "api/replies/edit/:id",
+        "url": "api/replies/edit/:replyId",
         "authorization": true,
         "parameters": [
             "text (optional)",
