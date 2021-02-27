@@ -328,7 +328,7 @@
         "url": "api/comments/delete",
         "authorization": true,
         "parameters": ["commentId"]
-c    },
+    },
     {
         "name": "Edit Comment",
         "description": "This API is for editing comment by admin",
