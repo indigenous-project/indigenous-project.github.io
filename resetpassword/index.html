@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="content-security-policy" content="default-src 'self';
+    style-src 'unsafe-inline' 'self' ; 
+    script-src 'unsafe-inline' 'self';
+    media-src 'none'; 
+    font-src  'self';
+    img-src 'self';
+    connect-src 'self' http://3.97.85.123:3030/"/>
+    
+    <title>Indigenous Bridge</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="./js/materialize.min.js"></script>
+</head>
+
+<body>
+    <div id="container" class="row">
+      <h3 class="col s12 m6">Indigenous Bridge</h3>
+      <h5 class="col s12 m6">Reset Password</h5>
+      <form class="col s12 m6">   
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate">
+              <label for="password">New Password</label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="confirmPassword" type="password" class="validate">
+              <label for="confirmPassword">Confirm Password</label>
+            </div>
+          </div>
+            <button id="submitButton" class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+      </form>
+
+      <div id='loader' class="progress col s12 m6">
+          <div class="indeterminate"></div>
+      </div>
+      </div>
+      <script defer src="./js/index.js"></script>
+</body>
+</html>
