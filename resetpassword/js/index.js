@@ -1,6 +1,6 @@
 // Index.js resetpassword script
 const app = {
-  baseUrl: "http://localhost:3030",
+  baseUrl: "http://3.97.85.123:3030",
   loader: document.getElementById("loader"),
   init: () => {
     document
