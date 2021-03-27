@@ -1,0 +1,26 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.row .col.s12{
+ margin: 0;
+ margin-bottom: 1rem;
+}
+
+form{
+    margin-top: 2rem;
+}
+#loader{
+    width: 70%;
+    margin-top: 10rem;
+    display: none;
+
+}
+
+#loader.active{
+    display: block;
+}
